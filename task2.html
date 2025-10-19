@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1100px;
+            height: 400px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid black; */
+            box-shadow: 2px 4px 8px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" onclick="demo(this, 1)"></div>
+        <div class="box" onclick="demo(this, 2)"></div>
+        <div class="box" onclick="demo(this, 3)"></div>
+        <div class="box" onclick="demo(this, 4)"></div>
+        <div class="box" onclick="demo(this, 5)"></div>
+
+    </div>
+    <!-- <button onclick="demo()">Add</button> -->
+
+
+
+    <script>
+        var box = document.getElementsByClassName('box');
+
+        function demo(box, flag) {
+            if(flag==1) {
+                box.style.background = 'red'
+            } else if(flag==2) {
+                box.style.background = 'green'
+            } else if(flag==3) {
+                box.style.background = 'yellow'
+            } else if(flag==4) {
+                box.style.background = 'pink'
+            } else if(flag==5) {
+                box.style.background = 'aqua'
+            }
+
+            
+        }
+    </script>
+
+</body>
+
+</html>

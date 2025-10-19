@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1100px;
+            height: 400px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid black; */
+            box-shadow: 2px 4px 8px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+    <button onclick="demo()">Add</button>
+
+
+
+    <script>
+        var box = document.getElementsByClassName('box');
+
+        function demo() {
+            for(var i=0;i<box.length;i++) {
+                box[i].style.background = 'green'
+            }
+        }
+    </script>
+
+</body>
+
+</html>

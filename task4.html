@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        #container {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            margin: 50px auto;
+            border-radius: 10px;
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .btn-container{
+            width: 300px;
+            height: 100px;
+            margin: auto;
+            gap: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(22, 22, 22, 0.919);
+            border-radius: 8px;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            color: white;
+            background-color: rgba(22, 22, 22, 0.919);
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .btn-reset{
+            width: 100px;
+            height: 50px;
+            background-color: blueviolet;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div id="container">0</div>
+
+    <div class="btn-container">
+        <button onclick="demo('+')">+</button>
+        <button onclick="demo('-')">-</button>
+        <button onclick="demo('reset')" class="btn-reset">Reset</button>
+    </div>
+
+
+
+    <script>
+
+        var box = document.getElementById("container"); 
+        var count = 0;
+
+        function demo(elem) {
+           if(elem == "+") {
+            count++
+           } else if(elem == "-") {
+            count--
+           } else {
+            count = 0
+           }
+           box.innerText = count
+        }
+        
+    </script>
+    
+</body>
+</html>
